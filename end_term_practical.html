@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div align="center" style="border:2px solid black; width:250px; height: 100px; margin:auto">
+            <input type = "number" id="num" placeholder="enter a number">
+            <br>
+            <button onClick="sum_of_n()">Sum of N number</button>
+            <div>
+            <p id="output"></p>
+            </div>
+    </div>
+    <script>
+        function sum_of_n(){
+            let n = parseInt(document.getElementById("num").value);
+            let sum = 0;
+
+            for(let i=1; i<=n; i++){
+                sum += i;
+            }
+            
+            document.getElementById("output").innerText = "Sum of numbers from 1 to " + n + " = " + sum;
+        }
+    </script>
+</body>
+</html>
